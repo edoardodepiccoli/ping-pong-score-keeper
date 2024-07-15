@@ -48,7 +48,22 @@ const game = {
     );
   },
 
+  checkCappotto: function () {
+    if (
+      (this.player1Score == 6 && this.player2Score == 0) ||
+      (this.player1Score == 9 && this.player2Score == 1)
+    ) {
+      this.finished = 1;
+    } else if (
+      (this.player2Score == 6 && this.player1Score == 0) ||
+      (this.player2Score == 9 && this.player1Score == 1)
+    ) {
+      this.finished = 1;
+    }
+  },
+
   checkFinished: function () {
+    this.checkCappotto();
     if (!this.checkTie()) {
       console.log(`p1 is ${this.player1Score}, p2 is ${this.player2Score}`);
       console.log(`turn is ${this.serveTurn}`);
