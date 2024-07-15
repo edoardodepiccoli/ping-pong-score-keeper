@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Pong Score Keeper</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="winning-screen">
+      <h1>Ready?</h1>
+      <p>Click to start</p>
+    </div>
+    <nav>
+      <div class="selector">
+        <div id="points-11-button" class="selector-button active">
+          11 points
+        </div>
+        <div id="points-21-button" class="selector-button">21 points</div>
+      </div>
+    </nav>
+    <div class="main-content">
+      <div class="score-keeper-div player1">
+        <p>7</p>
+        <img src="serve-icon-white.svg" alt="" width="80px" />
+      </div>
+      <div class="score-keeper-div player2">
+        <p>7</p>
+        <img src="serve-icon-white.svg" alt="" width="80px" class="hidden" />
+      </div>
+    </div>
+  </body>
+</html>
