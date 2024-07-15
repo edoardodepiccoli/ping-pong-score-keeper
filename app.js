@@ -95,15 +95,15 @@ const game = {
 };
 
 //ui elements
-//fix click on scroll behaviour
+//disable scrolling
 
-document.addEventListener(
-  "touchmove",
-  function (event) {
-    event.preventDefault();
-  },
-  { passive: false }
-);
+// document.addEventListener(
+//   "touchmove",
+//   function (event) {
+//     event.preventDefault();
+//   },
+//   { passive: false }
+// );
 
 //other stuff
 
