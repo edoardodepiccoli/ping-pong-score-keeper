@@ -194,7 +194,7 @@ function refreshUI() {
       console.log("player 1 wins");
 
       winningScreenH1 = document.querySelector(".winning-screen h1");
-      winningScreenH1.innerHTML = "Player 1 Wins!";
+      winningScreenH1.innerHTML = "Player 1<br>Wins!";
       winningScreenP = document.querySelector(".winning-screen p");
       winningScreenP.innerHTML = "Click to restart";
 
@@ -205,7 +205,7 @@ function refreshUI() {
       console.log("player 2 wins");
 
       winningScreenH1 = document.querySelector(".winning-screen h1");
-      winningScreenH1.innerHTML = "Player 2 Wins!";
+      winningScreenH1.innerHTML = "Player 2<br>Wins!";
       winningScreenP = document.querySelector(".winning-screen p");
       winningScreenP.innerHTML = "Click to restart";
 

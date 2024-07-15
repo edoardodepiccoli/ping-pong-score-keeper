@@ -16,7 +16,11 @@ body {
 body {
   font-size: 1.6rem;
 
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+
+  font-family: "Handlee", cursive;
   font-weight: 400;
   font-style: normal;
 
@@ -112,7 +116,7 @@ nav {
   width: 100%;
 
   color: white;
-  font-size: 256px;
+  font-size: 236px;
   font-weight: 600;
 
   display: flex;
