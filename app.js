@@ -105,29 +105,6 @@ document.addEventListener(
   { passive: false }
 );
 
-document
-  .getElementById(".score-keeper-div.player1")
-  .addEventListener("touchend", function (event) {
-    event.preventDefault();
-    event.target.click();
-  });
-document
-  .getElementById(".score-keeper-div.player2")
-  .addEventListener("touchend", function (event) {
-    event.preventDefault();
-    event.target.click();
-  });
-
-document.body.addEventListener(
-  "touchmove",
-  function (event) {
-    if (!event.target.closest("#scrollableDiv")) {
-      event.preventDefault();
-    }
-  },
-  { passive: false }
-);
-
 //other stuff
 
 const winningScreen = document.querySelector(".winning-screen");
