@@ -1,3 +1,9 @@
+//audio stuff
+function playSium() {
+  const sium = new Audio("./sium-cut.mp3");
+  sium.play();
+}
+
 //game logic
 const game = {
   maxScore: 11,
@@ -10,16 +16,30 @@ const game = {
 
   serveTurn: 0,
   finished: 0,
+  cappotto: 0,
 
   increasePlayer1Score: function () {
     this.player1Score++;
     this.checkServeTurn();
     this.checkFinished();
+    this.playAudio();
   },
   increasePlayer2Score: function () {
     this.player2Score++;
     this.checkServeTurn();
     this.checkFinished();
+    this.playAudio();
+  },
+
+  playAudio: function () {
+    if (this.cappotto) {
+      playSium();
+      return;
+    }
+    if (this.finished) {
+      playSium();
+      return;
+    }
   },
 
   checkServeTurn: function () {
@@ -54,11 +74,13 @@ const game = {
       (this.player1Score == 9 && this.player2Score == 1)
     ) {
       this.finished = 1;
+      this.cappotto = 1;
     } else if (
       (this.player2Score == 6 && this.player1Score == 0) ||
       (this.player2Score == 9 && this.player1Score == 1)
     ) {
       this.finished = 1;
+      this.cappotto = 1;
     }
   },
 
@@ -73,6 +95,7 @@ const game = {
       ) {
         console.log("finished");
         this.finished = 1;
+        playSium();
       }
     } else {
       console.log(
@@ -97,6 +120,7 @@ const game = {
       ) {
         console.log("finished");
         this.finished = 1;
+        playSium();
       }
     }
   },
@@ -106,6 +130,7 @@ const game = {
     this.player2Score = 0;
     this.serveTurn = 0;
     this.finished = 0;
+    this.cappotto = 0;
   },
 };
 
